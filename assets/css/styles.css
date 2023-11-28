@@ -605,3 +605,43 @@ footer p{
   }
 
 }
+
+@media screen and (max-width:850px) {
+  section.hero::before{
+    width: 100%;
+  }
+
+  section.hero .banner-cnt p{
+    max-width: 90%;
+  }
+
+  .tittle h3 {
+    font-size: 48px;
+  }
+
+  section.lfcc-env .swiper-slide{
+    width: 300px !important;
+    height: 300px !important;
+  }
+
+  .col {
+    width: 100%;
+}
+
+section.lfcc-about .abt-cnt .col-left{
+  padding-right: 0;
+}
+
+section.lfcc-services .abt-cnt .col-right{
+  padding: 0;
+}
+
+.col-left{
+  margin-bottom: 50px;
+}
+
+section.lfcc-about .abt-cnt img, section.lfcc-services .abt-cnt img{
+  border-radius: 5px;
+}
+
+}
