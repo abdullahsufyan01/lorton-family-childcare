@@ -400,8 +400,16 @@ form .user-box label {
 }
 
 form .user-box input:focus~label,
-form .user-box input:valid~label,
-form .user-box textarea:focus~label {
+form .user-box input:valid~label
+ {
+  top: -20px;
+  left: 0;
+  color: #8A2899;
+  font-size: 12px;
+}
+
+form .user-box textarea:focus~label,
+form .user-box textarea:valid~label{
   top: -20px;
   left: 0;
   color: #8A2899;
@@ -409,9 +417,12 @@ form .user-box textarea:focus~label {
 }
 
 form .user-box input:focus,
-form .user-box input:focus-visible,
+form .user-box input:focus-visible {
+  border-bottom: 1px solid #8A2899;
+}
+
 form .user-box textarea:focus,
-form .user-box textarea:focus-visible {
+form .user-box textarea:focus-visible{
   border-bottom: 1px solid #8A2899;
 }
 
@@ -451,6 +462,20 @@ form a span:nth-child(1) {
   height: 2px;
   background: linear-gradient(90deg, transparent, #8A2899);
   animation: btn-anim1 1s linear infinite;
+}
+
+.error {
+  border: 1px solid transparent;
+  border-color: transparent red;
+  background-color: rgba(255, 0, 0, 0.2);
+}
+
+.swiper-pagination {
+  display: none;
+}
+
+.swiper-pagination-bullet-active{
+  background: #8A2899 !important;
 }
 
 @keyframes btn-anim1 {
@@ -533,12 +558,12 @@ section.lfcc-contact .map {
   height: 600px;
 }
 
-footer{
+footer {
   padding: 30px 0;
   background-color: #3D2B69;
 }
 
-footer p{
+footer p {
   font-size: 14px;
   text-align: center;
   color: #bde0fe;
@@ -607,11 +632,14 @@ footer p{
 }
 
 @media screen and (max-width:850px) {
-  section.hero::before{
+
+
+
+  section.hero::before {
     width: 100%;
   }
 
-  section.hero .banner-cnt p{
+  section.hero .banner-cnt p {
     max-width: 90%;
   }
 
@@ -619,29 +647,155 @@ footer p{
     font-size: 48px;
   }
 
-  section.lfcc-env .swiper-slide{
+  section.lfcc-env .swiper-slide {
     width: 300px !important;
     height: 300px !important;
   }
 
   .col {
     width: 100%;
+  }
+
+  section.lfcc-about .abt-cnt .col-left {
+    padding-right: 0;
+  }
+
+  section.lfcc-services .abt-cnt .col-right {
+    padding: 0;
+  }
+
+  .col-left {
+    margin-bottom: 50px;
+  }
+
+  section.lfcc-about .abt-cnt img,
+  section.lfcc-services .abt-cnt img {
+    border-radius: 5px;
+  }
+
 }
 
-section.lfcc-about .abt-cnt .col-left{
-  padding-right: 0;
+@media screen and (max-width:780px) {
+  section.lfcc-testimonials .swiper-button-prev {
+    left: 0 !important;
+}
 }
 
-section.lfcc-services .abt-cnt .col-right{
-  padding: 0;
+@media screen and (max-width:580px) {
+  header .logo a {
+    font-size: 16px;
+  }
+
+  section.hero {
+    padding: 200px 0 50px;
+  }
+
+  section.lfcc-env {
+    padding: 50px 0;
+  }
+
+  section.lfcc-about {
+    padding: 50px 0;
+  }
+
+  section.lfcc-about .abt-cnt,
+  section.lfcc-services .abt-cnt {
+    margin-top: 25px;
+  }
+
+  section.lfcc-services {
+    padding: 50px 0;
+  }
+
+  section.lfcc-testimonials {
+    padding: 50px 0;
+  }
+
+  section.lfcc-contact {
+    padding: 50px 0 0;
+  }
+
+  header .top-bar .cnt-btn {
+    font-size: 12px;
+    padding: 10px 13px;
+    border-radius: 3px;
+  }
+
+  header .nav-bar ul li a {
+    font-size: 11px;
+  }
+
+  .swiper-pagination {
+    display: block;
+  }
+
+  section.lfcc-about .abt-cnt img,
+  section.lfcc-services .abt-cnt img {
+    box-shadow: 1px 1px 8px black;
+  }
+
+  form .user-box.col {
+    width: 100%;
+  }
 }
 
-.col-left{
-  margin-bottom: 50px;
+@media screen and (max-width:450px) {
+  section.hero .banner-cnt h1 {
+    font-size: 36px;
+    text-align: center;
+  }
+
+  section.hero .banner-cnt p {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .tittle h3 {
+    font-size: 32px;
+  }
+
+  h4 {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  p {
+    font-size: 14px;
+    text-align: center;
+    padding: 0;
+  }
+
+  .lfcc-cnt-info p {
+    padding-right: 0px;
+  }
+
+  section.lfcc-contact .col-left h5 {
+    text-align: center;
+  }
+
+  section.lfcc-services .abt-cnt .col-right ul li {
+    font-size: 14px;
+  }
+
+  .lfcc-timings {
+    text-align: center;
+  }
+
+  section.lfcc-contact .col h6 {
+    text-align: center;
+    margin-bottom: 8px;
+  }
+
 }
 
-section.lfcc-about .abt-cnt img, section.lfcc-services .abt-cnt img{
-  border-radius: 5px;
-}
+@media screen and (max-width:350px) {
 
+  header .top-bar {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  header .nav-bar {
+    display: none;
+  }
 }
