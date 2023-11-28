@@ -123,6 +123,7 @@ header .logo a {
   font-weight: 600;
   text-decoration: none;
   background: -webkit-linear-gradient(#7e2eab, #e78caf, #e35589, #68a3d5, #11497d);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
