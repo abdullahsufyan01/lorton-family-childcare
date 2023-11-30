@@ -740,6 +740,14 @@ footer p {
 }
 
 @media screen and (max-width:450px) {
+  section.lfcc-testimonials .swiper-button-prev {
+    left: 0 !important;
+  }
+}
+
+
+
+@media screen and (max-width:450px) {
   section.hero .banner-cnt h1 {
     font-size: 36px;
     text-align: center;
