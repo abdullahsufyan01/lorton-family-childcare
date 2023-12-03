@@ -93,6 +93,7 @@ p {
   font-weight: 400;
 }
 
+
 .container {
   max-width: 1440px;
   margin: 0 auto;
@@ -358,6 +359,17 @@ section.lfcc-contact .lfcc-cnt-info {
   margin-top: 30px;
 }
 
+.cnt-link{
+  color: #777d83;
+  font-style: italic;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.cnt-link:hover{
+  color: #8A2899;
+}
+
 section.lfcc-contact .tittle {
   margin-bottom: 50px;
 }
@@ -570,6 +582,82 @@ footer p {
 }
 
 
+section.lfcc-faq {
+  padding: 100px 0;
+  background-color: #ffffff;
+}
+
+section.lfcc-faq .accordian-wrap {
+  margin-top: 50px;
+}
+
+section.lfcc-faq .accordian-wrap .accordion-container {
+  width: 98%;
+  max-width: 1024px;
+}
+
+section.lfcc-faq .accordian-wrap .accordion-item {
+  background-color: #ffffff; /* White background for items */
+  border: 1px solid #e0e0e0; /* Light border */
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Softer shadow */
+}
+
+section.lfcc-faq .accordian-wrap .accordion-header {
+  background-color: #7e2eab; /* Soft purple */
+  color: #ffffff; /* White text */
+  padding: 15px;
+  font-size: 18px;
+  border: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px 8px 0 0;
+  transition: background-color 0.3s ease;
+}
+
+section.lfcc-faq .accordian-wrap .accordion-header:hover {
+  background-color: #8A2899; /* Darker shade of purple */
+}
+
+section.lfcc-faq .accordian-wrap .accordion-content {
+  background-color: #fafafa; /* Very light grey for content */
+  overflow: hidden;
+  padding: 0 35px;
+  max-height: 0;
+  transition: max-height 0.3s ease;
+}
+
+section.lfcc-faq .accordian-wrap .accordion-content p ul li{
+  font-size: 16px;
+  text-align: justify;
+  color: #777d83;
+  font-weight: 400;
+}
+
+section.lfcc-faq .accordian-wrap .accordion-content p {
+  margin: 15px 0;
+  line-height: 1.5;
+}
+
+.icon {
+  transition: transform 0.3s ease;
+}
+
+section.lfcc-faq .accordian-wrap .active .icon {
+  transform: rotate(45deg);
+}
+
+section.lfcc-faq .accordian-wrap .accordion-header.active{
+  background-color: #8A2899
+}
+
+
 
 @media screen and (max-width: 1500px) {
   .container {
@@ -742,6 +830,16 @@ footer p {
 @media screen and (max-width:450px) {
   section.lfcc-testimonials .swiper-button-prev {
     left: 0 !important;
+
+  }
+
+
+  section.lfcc-faq .accordian-wrap .accordion-header{
+    font-size: 14px;
+  }
+
+  section.lfcc-faq .accordian-wrap .accordion-content p{
+    text-align: left;
   }
 }
 
