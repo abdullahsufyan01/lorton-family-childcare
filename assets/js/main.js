@@ -55,3 +55,36 @@ document.querySelectorAll(".accordion-header").forEach((button) => {
     });
   });
 });
+
+
+
+// form submit 
+function submitForm(event) {
+  var form = document.getElementById('myForm');
+  var formData = new FormData(form);
+
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST', form.getAttribute('action'), true);
+  xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+  xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4) {
+          document.getElementById('form-messages').innerHTML = xhr.responseText;
+
+          // Clear the form fields only if the submission was successful
+          if (xhr.status === 200) {
+              form.reset();
+          }
+      }
+  };
+
+  xhr.send(new URLSearchParams(formData).toString());
+
+  // Prevent the default form submission behavior
+  event.preventDefault();
+}
+
+
+
+
+
